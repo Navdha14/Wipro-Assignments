@@ -1,0 +1,7 @@
+package com.test;
+
+public class Student {
+	private int id;
+	private String std_name;
+	private String std_city;
+}

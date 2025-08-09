@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+	<title>Contact</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #d1ffd6;
+            color: #0a662e;
+            padding: 20px 30px;
+            border: 2px solid #0a662e;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 128, 0, 0.4);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+	 <div class="navbar">
+    <a href="/">HOME</a>
+    <a href="/about">ABOUT</a>
+    <a href="/education">EDUCATION</a>
+    <a href="/skills">SKILLS</a>
+    <a href="/contact">CONTACT</a>
+</div>
+
+<h2 class="section-title">CONTACT</h2>
+<div class="form-container">
+    <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
+    <div class="popup" th:if="${confirmation}" th:text="${confirmation}" id="popupMsg"></div>
+
+    <script>
+        window.onload = function () {
+            var popup = document.getElementById("popupMsg");
+            if (popup && popup.innerText.trim() !== "") {
+                popup.style.display = "block";
+                setTimeout(() => {
+                    popup.style.display = "none";
+                }, 3000);
+            }
+        };
+    </script>
+</body>
+</html>

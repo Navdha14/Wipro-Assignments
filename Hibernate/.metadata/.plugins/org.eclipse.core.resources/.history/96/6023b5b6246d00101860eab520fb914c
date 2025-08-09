@@ -1,0 +1,14 @@
+package com.test;
+
+import org.hibernate.cfg.Configuration;
+
+public class StoreData {
+	public static void main(String[] args) {
+		Configuration cfg = new Configuration();
+		
+		cfg.configure("hibernate.cgf.xml");
+		
+//		SessionFactory sf = cfg.buildSessionFactory();
+		
+	}
+}

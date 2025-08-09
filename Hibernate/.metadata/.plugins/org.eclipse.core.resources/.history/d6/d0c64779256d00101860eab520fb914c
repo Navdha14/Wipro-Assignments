@@ -1,0 +1,16 @@
+package com.test;
+
+import org.hibernate.cfg.Configuration;
+
+import com.mysql.cj.xdevapi.SessionFactory;
+
+public class StoreData {
+	public static void main(String[] args) {
+		Configuration cfg = new Configuration();
+		
+		cfg.configure("hibernate.cfg.xml");
+		
+		SessionFactory sf =cfg.buildSessionFactory();
+		
+	}
+}

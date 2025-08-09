@@ -1,0 +1,9 @@
+package com.test;
+
+import com.sun.tools.javac.api.DiagnosticFormatter.Configuration;
+
+public class StoreData {
+	public static void main(String[] args) {
+		Configuration cfg = new Configuration();
+	}
+}
