@@ -1,0 +1,5 @@
+package com.example.assessment_service.entity;
+
+public class Assessment {
+
+}

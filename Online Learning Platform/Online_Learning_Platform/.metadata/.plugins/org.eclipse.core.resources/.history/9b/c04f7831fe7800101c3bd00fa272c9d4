@@ -1,0 +1,5 @@
+package com.example.assessment_service.repository;
+
+public class AssessmentRepository {
+
+}
